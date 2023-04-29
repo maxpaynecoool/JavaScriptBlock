@@ -102,7 +102,7 @@ var user = {
 	family: null,
 	address: undefined,
 	friend: {
-		name: 'Misha'
+		name: 'Misha',
 	}
 };
 
@@ -110,11 +110,22 @@ var cloneUserObject = {};
 
 for (var key in user) {
   cloneUserObject[key] = user[key];
+  if (typeof user[key] === 'object' && user[key] !== null) {
+    cloneUserObject[key] = {};
+    for (var key2 in user[key]) {
+      cloneUserObject[key][key2] = user[key][key2];
+    }
+    continue;
+  }
 }
+
 
 user.name = 'Lexa'
 user.age = 30
+user.friend.name = 'Alex'
 
 console.log(user);
 
 console.log(cloneUserObject)
+
+console.log(typeof(user.friend))
