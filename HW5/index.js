@@ -132,7 +132,7 @@ var palindrom = function() {
   return true;
 }
 
-console.log(palindrom());
+//console.log(palindrom());
 
 
 ////////////////////////////////////////////////////
@@ -144,3 +144,64 @@ const matrix = [
   [13, 324, 65, 312],
   [9092, 22, 45, 90000],
 ]
+
+var matrix2 = matrix.flat()
+
+console.log(matrix2)
+
+
+var average = function(matrix2) {
+  var sum = 0
+  for (var i = 0; i < matrix2.length; i++) {
+    sum += matrix2[i]
+  }
+  return sum / matrix2.length 
+}
+
+console.log(average(matrix2))
+
+
+
+////////////////////////////////////////////////////
+console.log('-------------TASK 3*----------------');
+const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4]
+
+
+var positive = []
+var negative = []
+
+for (var i = 0; i < mixedNumbers.length; i++) {
+  if (mixedNumbers[i] >= 0) {
+    positive.push(mixedNumbers[i])
+  } else {
+    negative.push(mixedNumbers[i])
+  }
+}
+
+console.log(positive)
+
+console.log(negative)
+
+
+
+////////////////////////////////////////////////////
+console.log('-------------TASK 4*----------------');
+
+const randomNumbers = [
+  Math.floor(Math.random()*10),
+  Math.floor(Math.random()*10),
+  Math.floor(Math.random()*10),
+  Math.floor(Math.random()*10),
+  Math.floor(Math.random()*10),
+  Math.floor(Math.random()*10),
+]
+
+console.log(randomNumbers)
+
+var cubedRandomNumbers = []
+
+for (var i = 0; i < randomNumbers.length; i++) {
+  cubedRandomNumbers.push(Math.pow(randomNumbers[i], 3));
+}
+
+console.log(cubedRandomNumbers);
