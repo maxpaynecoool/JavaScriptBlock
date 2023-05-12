@@ -8,10 +8,6 @@ const tttt = str2.findIndex(item => item = vowel.includes(item))
 
 console.log(tttt)
 
-const ttt = str2.filter((item, index) => [index] = vowel.includes(item))
-
-console.log(ttt)
-
 const getVowel = str2.filter((item, index) => {
     return (item = vowel.includes(item))
   })
@@ -19,6 +15,7 @@ const getVowel = str2.filter((item, index) => {
 
 console.log(getVowel)
 
+// не додумал :(
 
 
 console.log('-----------------------TASK 1-------------------------')
@@ -118,17 +115,23 @@ console.log(findFirstEvenNumberArrow(numbersTask5))
 
 console.log('-----------------------TASK 1*-------------------------')
 
-function Student() {
-  this.name = 'Misha',
-  this.rate = 5.5,
-  this.salary = 2000,
-  this.getSum = function() {
-    
+function Student(name, rate, salary) {
+  this.name = name,
+  this.rate = rate,
+  this.salary = salary,
+  this.getSumOfCredit = function() {
+    return this.rate * this.salary
   }
 }
 
-const student = new Student()
+let misha = new Student('Misha', 5.5, 2000)
+let sanya = new Student('Sanya', 6, 2500)
+let danya = new Student('Danya', 7, 3000)
+let anya = new Student('Anya', 8, 3500)
+let sveta = new Student('Sveta', 9.5, 4000)
 
+console.log(misha.getSumOfCredit())
+console.log(sanya.getSumOfCredit())
 
 
 console.log('-----------------------TASK 2*-------------------------')
@@ -186,8 +189,4 @@ console.log(highAndLow("1 9 3 4 -5"))
 
 console.log('-----------------------TASK 5*-------------------------')
 
-const isIsogram = (str) => !!str.toLowerCase().split``.filter((h => v => (h[v] = (h[v] || 0) + 1) === 2)({})).length;
-
-
-console.log(isIsogram('Анастасия'));
-console.log(isIsogram('Андрей'));
+// Дальше не успел :(
