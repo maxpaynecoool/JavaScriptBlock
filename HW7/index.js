@@ -21,7 +21,7 @@ console.log(getVowel)
 
 
 
-/*console.log('-----------------------TASK 1-------------------------')
+console.log('-----------------------TASK 1-------------------------')
 
 const fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
 
@@ -190,4 +190,4 @@ const isIsogram = (str) => !!str.toLowerCase().split``.filter((h => v => (h[v] =
 
 
 console.log(isIsogram('Анастасия'));
-console.log(isIsogram('Андрей'));*/
+console.log(isIsogram('Андрей'));
