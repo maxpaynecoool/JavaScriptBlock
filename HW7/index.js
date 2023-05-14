@@ -9,8 +9,8 @@ const tttt = str2.findIndex(item => item = vowel.includes(item))
 console.log(tttt)
 
 const getVowel = str2.filter((item, index) => {
-    return (item = vowel.includes(item))
-  })
+  return (item = vowel.includes(item))
+})
 
 
 console.log(getVowel)
@@ -76,7 +76,7 @@ const fibonacciTask4 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 
 console.log('-----Function Declaration-----')
 
 function getSumOfFibonacciTask4(arr) {
-  return arr.reduce(function(acc, item) {
+  return arr.reduce(function (acc, item) {
     return acc += item
   }, 0)
 }
@@ -98,7 +98,7 @@ const numbersTask5 = [5, 9, 13, 24, 54, 10, 13, 99, 1, 5]
 console.log('-----Function Declaration-----')
 
 function findFirstEvenNumber(arr) {
-  return arr.find(function(item) {
+  return arr.find(function (item) {
     return !(item % 2)
   })
 }
@@ -117,21 +117,42 @@ console.log('-----------------------TASK 1*-------------------------')
 
 function Student(name, rate, salary) {
   this.name = name,
-  this.rate = rate,
-  this.salary = salary,
-  this.getSumOfCredit = function() {
-    return this.rate * this.salary
-  }
+    this.rate = rate,
+    this.salary = salary,
+    this.getSumOfCredit = function () {
+      switch (this.rate) {
+        case 'A':
+          return this.salary * 12
+        case 'B':
+          return this.salary * 9
+        case 'C':
+          return this.salary * 6
+        default:
+          return 0
+      }
+    }
 }
 
-let misha = new Student('Misha', 5.5, 2000)
-let sanya = new Student('Sanya', 6, 2500)
-let danya = new Student('Danya', 7, 3000)
-let anya = new Student('Anya', 8, 3500)
-let sveta = new Student('Sveta', 9.5, 4000)
+let misha = new Student('Misha', 'A', 2000)
+let sanya = new Student('Sanya', 'B', 2500)
+let danya = new Student('Danya', 'C', 3000)
+let anya = new Student('Anya', 'D', 3500)
+let sveta = new Student('Sveta', 'A', 4000)
 
-console.log(misha.getSumOfCredit())
-console.log(sanya.getSumOfCredit())
+const listStudents = [misha, sanya, danya, anya, sveta]
+
+function getCommonSalary(list) {
+  let commonSalary = 0
+
+  list.forEach(student => {
+   commonSalary += student.getSumOfCredit()
+  })
+
+  return commonSalary
+}
+
+console.log(getCommonSalary(listStudents))
+console.log()
 
 
 console.log('-----------------------TASK 2*-------------------------')
@@ -178,7 +199,7 @@ const highAndLow = (str) => {
     }
     if (item < minNumb) {
       minNumb = item
-    } 
+    }
   }
   return maxNumb + ' ' + minNumb
 }
@@ -189,4 +210,22 @@ console.log(highAndLow("1 9 3 4 -5"))
 
 console.log('-----------------------TASK 5*-------------------------')
 
-// Дальше не успел :(
+let str1 = 'abcd'
+
+let str22 = 'паладин'
+
+function isogram(str) {
+  let arrayStr = str.toLowerCase().split('')
+
+  let isIsogram = false
+
+  arrayStr.forEach((elemStr, index) => {
+
+    if (arrayStr.includes(elemStr, index + 1)) {
+      isIsogram = true
+    }
+  })
+}
+
+console.log(isogram(str1))
+console.log(isogram(str22))
