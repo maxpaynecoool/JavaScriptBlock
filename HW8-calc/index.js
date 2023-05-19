@@ -44,7 +44,7 @@ const getResult = () => {
       result = arr.reduce((acc, item) => acc * item, 1)
       break
     case '/':
-      result = arr.reverse().reduce((acc, item) => item / acc, 1)
+      result = arr.reduce((acc, item) => acc / item)
       break
       /* Не понял почему при делении делится не первое число на второе, а наоборот (4 / 2 выдает 0.5, а не 2)
         поэтому сделал реверс массива      
