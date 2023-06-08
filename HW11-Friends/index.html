@@ -2,37 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      #inputFriend {
-        padding: 10px;
-        width: 300px;
-        font-size: 20px;
-        margin-right: 20px;
-        border: 2px solid black;
-      }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #inputFriend {
+      padding: 10px;
+      width: 300px;
+      font-size: 20px;
+      margin-right: 20px;
+      border: 2px solid black;
+    }
 
-      #addBtn {
-        padding: 10px;
-        font-size: 20px;
-        margin-right: 20px;
-      }
+    #addBtn {
+      padding: 10px;
+      font-size: 20px;
+      margin-right: 20px;
+    }
 
-      li {
-        font-size: 30px;
-        margin-bottom: 10px;
-        
-      }
+    #deleteBtn {
+      padding: 10px;
+      font-size: 20px;
+      margin-right: 20px;
+    }
 
-      #emptyInput {
-        color: rgb(252, 20, 20);
-        font-size: 20px;
-      }
-    </style>
+    li {
+      font-size: 30px;
+      margin-bottom: 10px;
+
+    }
+
+    #emptyInput {
+      color: rgb(252, 20, 20);
+      font-size: 20px;
+    }
+  </style>
 </head>
+
 <body>
   <h1>Список друзей</h1>
   <h1 id="friendsCount">
@@ -40,7 +47,8 @@
   </h1>
   <input id="inputFriend" value="" placeholder="Введите нового друга">
   <button id="addBtn"> Добавить </button>
-  <span id="emptyInput" hidden> Введите друга </span>
+  <button id="deleteBtn"> Удалить </button>
+  <span id="emptyInput" hidden></span>
 
   <ul id="friendsList">
 
@@ -49,4 +57,5 @@
   <script src="./index.js">
   </script>
 </body>
+
 </html>
