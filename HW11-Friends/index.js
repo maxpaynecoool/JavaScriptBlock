@@ -8,11 +8,8 @@ for(let i = 1; i <= localStorage.length; i++) {
   let item = localStorage.getItem(i)
 
   let lili = document.createElement('li')
-
   lili.textContent = item
-
   friendsList.append(lili)
-  
   countNumber.textContent++
 }
 
