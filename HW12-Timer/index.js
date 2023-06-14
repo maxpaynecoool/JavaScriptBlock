@@ -29,7 +29,7 @@ for (let i = 0; i < localStorage.length; i++) {
 
 startButton.onclick = () => {
   start()
-
+  let reversedCount = setInterval
   startButton.hidden = true
   stopButton.hidden = false
   removeButton.hidden = false
@@ -62,10 +62,12 @@ const start = () => {
     stopButton.hidden = true
 
     clearInterval(count)
+    clearInterval(reverseButton)
   })
   reverseButton.addEventListener('click', () => {
+    stopButton.hidden = false
     clearInterval(count)
-    let reversedCount = setInterval(() => {
+    reversedCount = setInterval(() => {
       let miliContent = +milisec.textContent
       let secContent = +seconds.textContent
       let minContent = +minutes.textContent
